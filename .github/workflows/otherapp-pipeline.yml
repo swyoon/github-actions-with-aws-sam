@@ -15,11 +15,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
       # sam build 
-      - run: sam build --use-container --template otherapp/template.yaml
-      # - run: sam build --use-container
+      - run: sam build --use-container
 
 # Run Unit tests- Specify unit tests here 
 
 # sam deploy
-      # - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --s3-bucket swyoontest --capabilities CAPABILITY_IAM --region ap-northeast-2
-      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name test-app-2 --s3-bucket swyoontest --capabilities CAPABILITY_IAM --region ap-northeast-2 --template-file otherapp/template.yaml
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --s3-bucket swyoontest --capabilities CAPABILITY_IAM --region ap-northeast-2
