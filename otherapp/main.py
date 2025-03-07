@@ -1,7 +1,7 @@
 import json
 
 # import requests
-
+from common import common_function
 
 def lambda_handler(event, context):
     """Sample pure Lambda function
@@ -32,6 +32,7 @@ def lambda_handler(event, context):
     #     print(e)
 
     #     raise e
+    common_function()
 
     return {
         "statusCode": 200,
